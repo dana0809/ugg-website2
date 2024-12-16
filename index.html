@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGG 웹사이트</title>
+    <style>
+        /* 기본 스타일 초기화 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; background-color: #f9f9f9; color: #333; }
+        
+        /* 헤더 스타일 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky; top: 0; z-index: 1000;
+        }
+        header img { width: 100px; }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul a { text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
+        nav ul a:hover { color: #8b0000; }
+
+        /* 섹션 공통 스타일 */
+        section { padding: 3rem 2rem; text-align: center; }
+        section h2 { margin-bottom: 2rem; font-size: 2.5rem; }
+
+        /* 메인 배너 스타일 */
+        .hero {
+            position: relative;
+            height: 600px;
+            overflow: hidden;
+        }
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top; /* 이미지 상단이 잘리지 않게 */
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 3rem;
+            transform: translateY(-50%);
+            color: #fff;
+        }
+        .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #8b0000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* 제품 카드 스타일 */
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .product-card img { width: 100%; }
+        .product-card h3, .product-card p { margin: 10px 0; }
+
+        /* About Us 섹션 */
+        .about-us p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* 리뷰 섹션 */
+        .reviews .review-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1rem;
+            max-width: 600px;
+            margin: 1rem auto;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .review-card strong { color: #8b0000; }
+
+        .review-form textarea, .review-form input {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .review-form button {
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background-color: #8b0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* 푸터 스타일 */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        footer a { color: #8b0000; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <img src="images/logo.png" alt="UGG 로고">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#women">Women</a></li>
+                <li><a href="#men">Men</a></li>
+                <li><a href="#kids">Kids</a></li>
+                <li><a href="#sale">Sale</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 메인 배너 -->
+    <section id="home" class="hero">
+        <img src="images/hero.jpg" alt="UGG 메인 배너">
+        <div class="hero-text">
+            <h1>Your winter, your runway</h1>
+            <a href="#sale" class="btn">Shop The Boot</a>
+        </div>
+    </section>
+
+    <!-- Women 제품 -->
+    <section id="women">
+        <h2>Women's Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/product1.jpg" alt="Women's Tasman II">
+                <h3>Women's Tasman II</h3>
+                <p>$100</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Men 제품 -->
+    <section id="men">
+        <h2>Men's Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/product2.jpg" alt="Men's Scuff">
+                <h3>Men's Scuff</h3>
+                <p>$90</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kids 제품 -->
+    <section id="kids">
+        <h2>Kids' Products</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/product3.jpg" alt="Kids' Fluff Yeah">
+                <h3>Kids' Fluff Yeah</h3>
+                <p>$80</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>
+            Our story begins in the 1970s, with a surfer who broke convention and decided to live by his own authentic rules. 
+            After realizing life as an accountant was not for him, Brian Smith moved to California and recognized a desire to create sheepskin footwear. 
+            With a dream, Brian bravely pursued his passion, redefining his life and our culture forever. 
+            Now, we honor our origin story while living fully for today. 
+        </p>
+    </section>
+
+    <!-- 리뷰 섹션 -->
+    <section class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review-card">
+            <strong>Jane Doe</strong>
+            <p>"These boots are the comfiest I've ever owned! Perfect for winter."</p>
+        </div>
+        <div class="review-card">
+            <strong>John Smith</strong>
+            <p>"Stylish and warm, highly recommend for anyone!"</p>
+        </div>
+        <form class="review-form">
+            <h3>Write a Review</h3>
+            <input type="text" placeholder="Your Name" required>
+            <textarea placeholder="Your Review" rows="4" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        <p>&copy; 2024 UGG. <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </footer>
+</body>
+</html>
